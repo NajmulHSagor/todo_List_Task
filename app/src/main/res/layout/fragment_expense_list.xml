@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ExpenseListFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/expenseRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:src="@android:drawable/ic_input_add" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/botton_sheet_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="734dp"
+            android:layout_margin="10dp"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="16dp"
+            app:cardBackgroundColor="#F44336"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+
+                >
+
+                <EditText
+                    android:id="@+id/titleInputET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/title"
+                    android:hint="Enter Title"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/amountInputET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/taka"
+                    android:hint="Enter Amount"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+
+
+                    />
+                <TextView
+                    android:id="@+id/rowTitleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:text="Do you have a cash memo?"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    tools:text="Buy Book"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/galleryBTN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/photo_gallery"
+                        android:text=""
+                        android:textColor="#FF5722"
+                        android:textSize="20dp"
+
+                        />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/cameraBTN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_baseline_camera_24"
+                        android:text=""
+                        android:textColor="#FF5722"
+                        android:textSize="20dp"
+
+                        />
+
+                </LinearLayout>
+                <ImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/expenseIV"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+
+
+                    />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/saveBTN"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#FFC107"
+                    android:text="Save"
+                    android:textColor="#F44336"
+                    android:textSize="20dp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
